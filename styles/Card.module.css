@@ -1,0 +1,19 @@
+.card {
+  display: inline-block;
+  background-color: #fffffe;
+  margin: 1rem;
+  width: 400px;
+  height: 500px;
+  border-radius: 1rem;
+}
+
+.image {
+  border-radius: 1rem 1rem 0 0;
+  width: 500px;
+}
+
+.h3 {
+  max-width: 300px;
+  margin: 0;
+  padding: 0.5rem;
+}

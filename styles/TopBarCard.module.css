@@ -1,0 +1,10 @@
+.container {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 6.25rem auto;
+}
+
+.container h4 {
+  margin: 0;
+  padding: 0.5rem;
+}

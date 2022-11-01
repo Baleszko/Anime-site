@@ -1,0 +1,9 @@
+.aside {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  border-radius: 1rem;
+  margin: 1rem 3rem 0rem 1rem;
+  padding: 0.5rem;
+  color: white;
+}

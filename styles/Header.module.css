@@ -1,0 +1,23 @@
+.header {
+  margin: 1rem 2rem;
+  height: 6rem;
+
+  /* From https://css.glass */
+  background: var(--main-design-color);
+
+  border-radius: 1rem;
+  /*position: -webkit-sticky;
+  position: sticky;
+  top: 1rem;
+  */
+  grid-column-start: 1;
+  grid-column-end: 3;
+  display: flex;
+  align-items: center;
+}
+
+.link {
+  font-size: 1.953rem;
+  font-weight: 600;
+  padding: 1rem;
+}
