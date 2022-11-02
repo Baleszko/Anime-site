@@ -1,6 +1,5 @@
 .cardWrapper {
-  margin: 2rem 4rem;
-  display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(3, 1fr);
+  margin: 0rem 2rem 0rem 2rem;
+  display: flex;
+  flex-direction: column;
 }

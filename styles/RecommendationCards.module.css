@@ -1,0 +1,15 @@
+.card {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2);
+  background-color: var(--white);
+  margin: 0rem 1rem 1rem 2rem;
+  /* height: 500px; */
+  border-radius: 1rem;
+  gap: 1rem;
+  padding: 0.5rem;
+}
+
+.image {
+  border-radius: 1rem;
+}

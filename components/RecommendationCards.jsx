@@ -1,19 +1,37 @@
 import Image from "next/image";
-import styles from "../styles/Card.module.css";
+import styles from "../styles/RecommendationCards.module.css";
 
 function Card({ content, firstData, secondData }) {
   return (
     <div className={styles.card}>
-      <p>{content}</p>
-      {/* <Image
+      <Image
         className={styles.image}
-        src={cardData.images.webp.large_image_url}
-        width={300}
-        height={350}
-        layout="responsive"
-        alt={`Picture of the ${cardData.title}`}
+        src={firstData.images.webp.large_image_url}
+        width={200}
+        height={250}
+        alt={firstData.title}
+        loading="lazy"
+        // layout="responsive"
       ></Image>
-      <h3 className={styles.h3}>{cardData.title}</h3> */}
+      <h3>
+        If you like...: <br />
+        {firstData.title}
+      </h3>
+
+      <Image
+        className={styles.image}
+        src={secondData.images.webp.large_image_url}
+        width={200}
+        height={250}
+        alt={secondData.title}
+        loading="lazy"
+        // layout="responsive"
+      ></Image>
+      <h3>
+        ...then you might like: <br />
+        {secondData.title}{" "}
+      </h3>
+      <p>{content}</p>
     </div>
   );
 }

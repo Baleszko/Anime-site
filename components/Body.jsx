@@ -1,4 +1,4 @@
-import style from "../styles/Body.module.css";
+// import style from "../styles/Body.module.css";
 import Recommendations from "./Recommendations";
 import TopBar from "./TopBar";
 
