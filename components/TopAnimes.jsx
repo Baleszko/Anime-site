@@ -1,5 +1,5 @@
-import style from "../styles/TopBar.module.css";
-import TopBarCard from "./TopBarCard";
+import style from "../styles/Top.module.css";
+import TopBarCard from "./TopAnimesCard";
 
 function TopBar({ top }) {
   return (

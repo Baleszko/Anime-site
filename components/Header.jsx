@@ -7,6 +7,9 @@ function Header() {
       <Link href="/">
         <a className={styles.link}>Home</a>
       </Link>
+      <Link href="/top">
+        <a className={styles.link}>Top</a>
+      </Link>
     </header>
   );
 }
