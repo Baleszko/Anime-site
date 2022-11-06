@@ -4,13 +4,16 @@
   flex-direction: column;
 }
 
-.recommendations {
-  /* grid-column-start: 1; */
-}
-
 .card:hover,
 .card:focus,
 .card:active {
+}
+
+.title {
+  font-weight: 800;
+  font-size: 3.052rem;
+  margin: 3rem;
+  margin-left: 4rem;
 }
 
 @media (max-width: 600px) {

@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import Header from "../components/Header";
-import TopAnimesCard from "../components/TopAnimesCard";
+import TopAnimes from "../components/TopAnimes";
 
-function TopAnimes() {
+function Top() {
   const [topAnimes, setTopAnimes] = useState([]);
 
   useEffect(() => {
@@ -19,9 +19,9 @@ function TopAnimes() {
   return (
     <>
       <Header></Header>
-      {/* <TopAnimesCard></TopAnimesCard> */}
+      <TopAnimes top={topAnimes}></TopAnimes>
     </>
   );
 }
 
-export default TopAnimes;
+export default Top;

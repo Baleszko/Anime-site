@@ -1,7 +1,7 @@
 import Image from "next/image";
-import style from "../styles/TopBarCard.module.css";
+import style from "../styles/TopAnimeCard.module.css";
 
-function TopBarCard({ topItem }) {
+function TopAnimeCard({ topItem }) {
   return (
     <div className={style.container}>
       <Image
@@ -15,4 +15,4 @@ function TopBarCard({ topItem }) {
   );
 }
 
-export default TopBarCard;
+export default TopAnimeCard;

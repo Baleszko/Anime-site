@@ -1,14 +1,14 @@
-import style from "../styles/Top.module.css";
-import TopBarCard from "./TopAnimesCard";
+import styles from "../styles/TopAnime.module.css";
+import TopAnimeCard from "./TopAnimeCard";
 
-function TopBar({ top }) {
+function TopAnimes({ top }) {
   return (
-    <aside className={style.aside}>
+    <main className={styles.main}>
       {top.map((topItem) => (
-        <TopBarCard key={topItem.mal_id} topItem={topItem}></TopBarCard>
+        <TopAnimeCard key={topItem.mal_id} topItem={topItem}></TopAnimeCard>
       ))}
-    </aside>
+    </main>
   );
 }
 
-export default TopBar;
+export default TopAnimes;
