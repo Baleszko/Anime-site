@@ -1,9 +1,17 @@
 .header {
   margin: 1rem 2rem 1rem 2rem;
-  height: 6rem;
+  height: 7rem;
   min-width: 25rem;
   /* From https://css.glass */
-  background: var(--main-design-color);
+
+  background: #ff8d3ce4;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.7px);
+  -webkit-backdrop-filter: blur(3.7px);
+  border: 1px solid #ff8d3ce4;
+
+  /* background: var(--main-design-color); */
   border-radius: 1rem;
   position: -webkit-sticky;
   position: sticky;

@@ -1,16 +1,20 @@
 import Image from "next/image";
-import style from "../styles/TopAnimeCard.module.css";
+import styles from "../styles/TopAnimeCard.module.css";
 
-function TopAnimeCard({ topItem }) {
+function TopAnimeCard({ topItem, id }) {
   return (
-    <div className={style.container}>
-      <Image
-        src={topItem.images.webp.image_url}
-        alt={topItem.title}
-        height="120"
-        width="100"
-      ></Image>
-      <h4> {topItem.title} </h4>
+    <div className={styles.container}>
+      <div className={styles.imageContainer}>
+        <Image
+          className={styles.image}
+          src={topItem.images.webp.image_url}
+          alt={topItem.title}
+          layout="fill"
+        ></Image>
+      </div>
+      <h2 className={styles.title}>
+        {id}. <p>{topItem.title} </p>
+      </h2>
     </div>
   );
 }
