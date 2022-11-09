@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "../styles/RecommendationCards.module.css";
 
-function Card({ content, firstData, secondData }) {
+function Card({ content, firstData, secondData, userName }) {
   return (
     <>
       <div className={styles.card}>
@@ -38,7 +38,11 @@ function Card({ content, firstData, secondData }) {
           </div>
         </div>
 
-        <p className={styles.content}>{content}</p>
+        <div className={styles.contentContainer}>
+          <h2>Description:</h2>
+          <p className={styles.content}>{content}</p>
+          <p className={styles.userName}>{userName}</p>
+        </div>
       </div>
     </>
   );

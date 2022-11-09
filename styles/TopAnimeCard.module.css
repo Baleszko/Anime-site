@@ -1,6 +1,5 @@
 .container {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
+  display: flex;
   background-color: var(--main-color);
   padding: 1rem;
   margin: 1rem;
@@ -9,17 +8,46 @@
 
 .imageContainer {
   position: relative;
-  max-width: 16rem;
+  min-width: 18rem;
   aspect-ratio: 0.8;
 }
 .image {
   border-radius: 1rem;
 }
+
+.dataContainer {
+  display: grid;
+  grid-template-rows: 3rem 3rem;
+  padding-left: 1rem;
+  align-items: center;
+}
 .title {
-  font-size: 1.563rem;
+  font-size: 2.441rem;
+  grid-row-start: 1;
+  margin: 0;
+  display: inline;
+}
+
+.container h3 {
+  display: inline;
+  grid-row-start: 1;
+  margin: 0;
+  padding-left: 1rem;
+  padding-top: 1rem;
 }
 
 .container h4 {
   margin: 0;
   padding: 0.5rem;
+}
+
+.svg {
+  width: 2.5rem;
+  fill: #ffd43b;
+}
+
+.score {
+  padding-left: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 500;
 }

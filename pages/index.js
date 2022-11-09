@@ -14,7 +14,6 @@ export default function Home() {
       );
       const jsonAnimeRecommendation = await animeRecommendationFetch.json();
       setAnimeRecommendation(jsonAnimeRecommendation.data);
-      console.log("done");
     };
 
     fetchData();
@@ -28,7 +27,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header></Header>
-      <h1 className={styles.title}>Recommandation</h1>
+      <h1 className={styles.title}>Recommandations</h1>
       <Recommendations recommendations={animeRecommendation}></Recommendations>
     </div>
   );

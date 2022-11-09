@@ -10,7 +10,6 @@ function Top() {
       const topAnimeFetch = await fetch("https://api.jikan.moe/v4/top/anime");
       const jsonTopAnimes = await topAnimeFetch.json();
       setTopAnimes(jsonTopAnimes.data);
-      console.log("done");
     };
 
     fetchData();

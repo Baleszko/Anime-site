@@ -56,9 +56,21 @@
   font-size: 1.563rem;
   display: inline;
 }
-.content {
+
+.contentContainer {
   grid-column: 1 / span 2;
-  margin: 3rem;
-  margin-bottom: 0;
-  padding: 0 5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  padding: 1rem;
+  letter-spacing: 0.08rem;
+}
+
+.userName {
+  font-style: italic;
+  margin: 0;
+  align-self: end;
+  color: var(--secondary-text-color);
 }
