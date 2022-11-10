@@ -43,6 +43,9 @@
 
 .svg {
   width: 2.5rem;
+  stroke: black;
+  stroke-width: 0.05rem;
+  color: #ffd43b;
   fill: #ffd43b;
 }
 

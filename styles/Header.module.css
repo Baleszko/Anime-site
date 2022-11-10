@@ -27,4 +27,10 @@
   font-size: 1.953rem;
   font-weight: 600;
   padding: 1rem;
+  margin-left: 1rem;
+}
+
+.link:hover {
+  border-radius: 1rem;
+  box-shadow: 0 0 0.4rem 0.3rem rgba(0, 0, 0, 0.094);
 }

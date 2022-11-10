@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import styles from "../styles/RecommendationCards.module.css";
 
 function Card({ content, firstData, secondData, userName }) {
@@ -11,31 +12,35 @@ function Card({ content, firstData, secondData, userName }) {
         </div>
 
         <div className={styles.cardContainer}>
-          <div className={styles.imageCard}>
-            <div className={styles.imageContainer}>
-              <Image
-                className={styles.image}
-                src={firstData.images.webp.large_image_url}
-                alt={firstData.title}
-                loading="lazy"
-                layout="fill"
-              ></Image>
+          <Link href={`anime/${firstData.mal_id}`}>
+            <div className={styles.imageCard}>
+              <div className={styles.imageContainer}>
+                <Image
+                  className={styles.image}
+                  src={firstData.images.webp.large_image_url}
+                  alt={firstData.title}
+                  loading="lazy"
+                  layout="fill"
+                ></Image>
+              </div>
+              <h3 className={styles.title}> {firstData.title} </h3>
             </div>
-            <h3 className={styles.title}> {firstData.title} </h3>
-          </div>
+          </Link>
 
-          <div className={styles.imageCard}>
-            <div className={styles.imageContainer}>
-              <Image
-                className={styles.image}
-                src={secondData.images.webp.large_image_url}
-                alt={secondData.title}
-                loading="lazy"
-                layout="fill"
-              ></Image>
+          <Link href={`anime/${secondData.mal_id}`}>
+            <div className={styles.imageCard}>
+              <div className={styles.imageContainer}>
+                <Image
+                  className={styles.image}
+                  src={secondData.images.webp.large_image_url}
+                  alt={secondData.title}
+                  loading="lazy"
+                  layout="fill"
+                ></Image>
+              </div>
+              <h3 className={styles.title}> {secondData.title} </h3>
             </div>
-            <h3 className={styles.title}> {secondData.title} </h3>
-          </div>
+          </Link>
         </div>
 
         <div className={styles.contentContainer}>
