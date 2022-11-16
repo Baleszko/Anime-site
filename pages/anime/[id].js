@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import Header from "../../components/Header";
@@ -19,10 +20,17 @@ function Anime() {
 
     animeFetch();
   }, [id]);
+
   return (
     <>
       <Header></Header>
-      <p>{anime.mal_id}</p>
+      <Image
+        src={anime.images?.webp.large_image_url}
+        alt={anime.title}
+        width={300}
+        height={300}
+      ></Image>
+      <h1>{anime.title}</h1>
     </>
   );
 }

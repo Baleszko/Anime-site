@@ -16,21 +16,25 @@
 }
 
 .dataContainer {
-  display: grid;
-  grid-template-rows: 3rem 3rem;
+  display: flex;
+  flex-direction: column;
   padding-left: 1rem;
-  align-items: center;
+  align-items: left;
 }
+
+.titleContainer {
+  cursor: pointer;
+}
+
 .title {
   font-size: 2.441rem;
-  grid-row-start: 1;
   margin: 0;
   display: inline;
 }
 
 .container h3 {
   display: inline;
-  grid-row-start: 1;
+  font-size: 1.953rem;
   margin: 0;
   padding-left: 1rem;
   padding-top: 1rem;
@@ -39,8 +43,13 @@
 .container h4 {
   margin: 0;
   padding: 0.5rem;
+  font-size: 1.25rem;
 }
 
+.scoreContainer {
+  display: flex;
+  align-items: center;
+}
 .svg {
   width: 2.5rem;
   stroke: black;
@@ -53,4 +62,20 @@
   padding-left: 0.5rem;
   font-size: 1.25rem;
   font-weight: 500;
+  color: var(--main-text-color);
+  display: inline;
+  font-weight: 500;
+}
+
+.genresList {
+  /* list-style: none; */
+  display: inline;
+  margin: 0;
+  padding: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.genresList li {
+  display: inline;
+  padding-right: 0.5rem;
 }

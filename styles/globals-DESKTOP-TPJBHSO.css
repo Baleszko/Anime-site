@@ -30,7 +30,7 @@ a {
     --white: #ecd9e089;
     color: var(--main-text-color);
     background: var(--main-color);
-    /* height: 100%; */
+
     background-color: #eff0f3;
 
     background-image: repeating-radial-gradient(
