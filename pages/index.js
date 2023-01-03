@@ -3,6 +3,7 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Header from "../components/Header";
 import Recommendations from "../components/Recommendations";
+import RecommendationCardSkeleton from "../components/RecommendationCardSkeleton";
 
 export default function Home() {
   const [animeRecommendation, setAnimeRecommendation] = useState([]);
@@ -28,7 +29,13 @@ export default function Home() {
       </Head>
       <Header></Header>
       <h1 className={styles.title}>Recommandations</h1>
-      <Recommendations recommendations={animeRecommendation}></Recommendations>
+      {!animeRecommendation ? (
+        <RecommendationCardSkeleton></RecommendationCardSkeleton>
+      ) : (
+        <Recommendations
+          recommendations={animeRecommendation}
+        ></Recommendations>
+      )}
     </div>
   );
 }

@@ -16,7 +16,17 @@
   margin-left: 4rem;
 }
 
-@media (max-width: 600px) {
+@media screen and (max-width: 900px) {
+  .title {
+    font-size: 3.052rem;
+    margin: 2rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .title {
+    font-size: 1.953rem;
+    margin: 1rem;
+  }
 }
 
 @media (prefers-color-scheme: dark) {

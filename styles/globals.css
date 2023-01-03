@@ -39,5 +39,6 @@ a {
         #eff0f3 12px
       ),
       repeating-linear-gradient(#ffd1b155, #ffd1b1);
+    min-height: 100vh;
   }
 }

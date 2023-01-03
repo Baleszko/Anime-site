@@ -3,21 +3,9 @@
   flex-direction: column;
   background-color: var(--main-color);
   /* place-items: center; */
-  margin-bottom: 3rem;
+  margin: 0 2rem 2rem 2rem;
   border-radius: 2rem;
   padding: 2rem;
-  animation: fadeIn 300ms ease forwards;
-}
-
-@keyframes fadeIn {
-  0% {
-    transform: translateX(-5rem);
-    opacity: 0%;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 100%;
-  }
 }
 
 .cardContainer {
@@ -43,18 +31,15 @@
   margin: 1rem;
   padding: 1rem;
   width: 30rem;
+  /* background-color: var(--secondary-design-color-light); */
   border-radius: 1rem;
+  background-color: var(--white);
 }
 
 .imageContainer {
   position: relative;
   min-width: 10rem;
   aspect-ratio: 0.8;
-}
-
-.image {
-  border-radius: 1rem;
-  padding: 1rem;
 }
 
 .title {
@@ -78,17 +63,4 @@
   margin: 0;
   align-self: end;
   color: var(--secondary-text-color);
-}
-
-@media screen and (max-width: 600px) {
-  .card {
-  }
-}
-@media (hover: hover) {
-  .imageCard:hover {
-    background-color: var(--secondary-design-color-light);
-    padding: 1rem;
-    cursor: pointer;
-    transform: scale(1.01);
-  }
 }
