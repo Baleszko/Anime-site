@@ -1,12 +1,11 @@
 .card {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   background-color: var(--main-color);
-  /* place-items: center; */
   margin-bottom: 3rem;
   border-radius: 2rem;
   padding: 2rem;
   animation: fadeIn 300ms ease forwards;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 @keyframes fadeIn {
@@ -18,11 +17,6 @@
     transform: translateX(0);
     opacity: 100%;
   }
-}
-
-.cardContainer {
-  display: flex;
-  justify-content: space-evenly;
 }
 .subtitleContainer {
   display: flex;
@@ -37,29 +31,8 @@
   font-size: 1.953rem;
 }
 
-.imageCard {
-  display: flex;
-  flex-direction: column;
-  margin: 1rem;
-  padding: 1rem;
-  width: 30rem;
-  border-radius: 1rem;
-}
-
-.imageContainer {
-  position: relative;
-  min-width: 10rem;
-  aspect-ratio: 0.8;
-}
-
-.image {
-  border-radius: 1rem;
-  padding: 1rem;
-}
-
-.title {
-  font-size: 1.563rem;
-  display: inline;
+.secondTitle {
+  justify-self: end;
 }
 
 .contentContainer {
@@ -80,15 +53,49 @@
   color: var(--secondary-text-color);
 }
 
-@media screen and (max-width: 600px) {
-  .card {
-  }
-}
 @media (hover: hover) {
   .imageCard:hover {
     background-color: var(--secondary-design-color-light);
     padding: 1rem;
     cursor: pointer;
     transform: scale(1.01);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .card {
+    display: flex;
+    flex-direction: column;
+  }
+  .firtsCard {
+    order: 1;
+  }
+  .secondTitle {
+    order: 2;
+    justify-self: unset;
+  }
+  .secondCard {
+    order: 3;
+  }
+  .contentContainer {
+    order: 4;
+  }
+}
+@media screen and (max-width: 600px) {
+  .subtitle {
+    font-size: 1.25rem;
+  }
+  .contentContainer h2 {
+    margin-top: 3rem;
+    margin-bottom: 0rem;
+    font-size: 1.25rem;
+  }
+  .content {
+    padding: 1rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.08rem;
+  }
+  .userName {
+    font-size: 0.64rem;
   }
 }

@@ -8,7 +8,7 @@ function TopAnimeCard({ topItem, id }) {
       <div className={styles.imageContainer}>
         <Image
           className={styles.image}
-          src={topItem.images.webp.image_url}
+          src={topItem.images?.webp.image_url}
           alt={topItem.title}
           layout="fill"
         ></Image>
@@ -26,8 +26,6 @@ function TopAnimeCard({ topItem, id }) {
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
             strokeWidth="1.5"
-            // stroke="currentColor"
-            // class="w-6 h-6"
             className={styles.svg}
           >
             <path

@@ -1,0 +1,60 @@
+.cardContainer {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.imageCard {
+  display: flex;
+  flex-direction: column;
+  width: 30rem;
+  margin: 1rem;
+  padding: 1rem;
+  aspect-ratio: 2/3;
+  border-radius: 1rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.imageContainer {
+  position: relative;
+  min-width: 10rem;
+
+  aspect-ratio: 0.8;
+}
+
+.image {
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.title {
+  font-size: 1.563rem;
+  display: inline;
+}
+
+@media (hover: hover) {
+  .imageCard:hover {
+    cursor: pointer;
+    transform: scale(1.04);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .imageCard {
+    width: 22rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  .cardWrapper {
+    margin: 0 2rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .cardWrapper {
+    margin: 0 1rem;
+  }
+  .imageCard {
+    margin: 0;
+    padding: 1rem;
+  }
+}

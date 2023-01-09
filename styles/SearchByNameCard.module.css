@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  background-color: var(--main-color);
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 2rem;
+  animation: fadeIn 300ms ease forwards;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.imageContainer {
+  position: relative;
+  min-width: 18rem;
+  aspect-ratio: 0.8;
+}
+
+.image {
+  border-radius: 1rem;
+}
+
+@keyframes fadeIn {
+  0% {
+    transform: translateX(-5rem);
+    opacity: 0%;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 100%;
+  }
+}

@@ -4,6 +4,7 @@ import RecommendationsCard from "./RecommendationCards";
 function Recommendations({ recommendations }) {
   return (
     <main className={styles.cardWrapper}>
+      <h1 className={styles.title}>Recommandations</h1>
       {recommendations.map((Item) => (
         <RecommendationsCard
           key={`${Item.mal_id}_${Item.user.username}`}

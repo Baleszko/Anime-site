@@ -3,18 +3,23 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Header from "../components/Header";
 import Recommendations from "../components/Recommendations";
-import RecommendationCardSkeleton from "../components/RecommendationCardSkeleton";
+import Error from "../components/Error";
 
 export default function Home() {
   const [animeRecommendation, setAnimeRecommendation] = useState([]);
+  const [isError, setIsError] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
-      const animeRecommendationFetch = await fetch(
-        "https://api.jikan.moe/v4/recommendations/anime"
-      );
-      const jsonAnimeRecommendation = await animeRecommendationFetch.json();
-      setAnimeRecommendation(jsonAnimeRecommendation.data);
+      try {
+        const animeRecommendationFetch = await fetch(
+          "https://api.jikan.moe/v4/recommendations/anime"
+        );
+        const jsonAnimeRecommendation = await animeRecommendationFetch.json();
+        setAnimeRecommendation(jsonAnimeRecommendation.data);
+      } catch (error) {
+        setIsError(true);
+      }
     };
 
     fetchData();
@@ -28,9 +33,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header></Header>
-      <h1 className={styles.title}>Recommandations</h1>
-      {!animeRecommendation ? (
-        <RecommendationCardSkeleton></RecommendationCardSkeleton>
+      {/* <Error></Error> */}
+      {isError ? (
+        <Error></Error>
       ) : (
         <Recommendations
           recommendations={animeRecommendation}

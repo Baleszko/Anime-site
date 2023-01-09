@@ -2,40 +2,40 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import Header from "../../components/Header";
 import Error from "../../components/Error";
-import style from "../../styles/animeId.module.css";
-import AnimeDetails from "../../components/AnimeDetails";
+import style from "../../styles/animeSearch.module.css";
+import SearchByName from "../../components/SearchByName";
 
-function Anime() {
+function Search() {
   const router = useRouter();
-  const { id } = router.query;
+  const { name } = router.query;
   const [anime, setAnime] = useState([]);
   const [isError, setIsError] = useState(false);
 
   useEffect(() => {
-    if (!id) {
+    if (!name) {
       return;
     }
     const animeFetch = async () => {
       try {
-        const animeFetchId = await fetch(
-          `https://api.jikan.moe/v4/anime/${id}/full`
+        const animeFetchName = await fetch(
+          `https://api.jikan.moe/v4/anime?q=${name}`
         );
-        const jsonAnimeFetchId = await animeFetchId.json();
-        setAnime(jsonAnimeFetchId.data);
+        const jsonAnimeFetchName = await animeFetchName.json();
+        setAnime(jsonAnimeFetchName.data);
       } catch (error) {
         setIsError(true);
       }
     };
 
     animeFetch();
-  }, [id]);
+  }, [name]);
 
   return (
     <div className={style.container}>
       <Header></Header>
-      {isError ? <Error></Error> : <AnimeDetails anime={anime}></AnimeDetails>}
+      {isError ? <Error></Error> : <SearchByName anime={anime}></SearchByName>}
     </div>
   );
 }
 
-export default Anime;
+export default Search;
