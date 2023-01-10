@@ -32,7 +32,7 @@ function Anime() {
 
   return (
     <div className={style.container}>
-      <Header></Header>
+      {/* <Header></Header> */}
       {isError ? <Error></Error> : <AnimeDetails anime={anime}></AnimeDetails>}
     </div>
   );

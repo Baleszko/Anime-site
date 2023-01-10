@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useState } from "react";
 import styles from "../styles/Header.module.css";
 import SearchBar from "./SearchBar";
 

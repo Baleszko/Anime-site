@@ -23,7 +23,7 @@ function Top() {
 
   return (
     <div className="top_container">
-      <Header></Header>
+      {/* <Header></Header> */}
       {isError ? <Error></Error> : <TopAnimes top={topAnimes}></TopAnimes>}
     </div>
   );

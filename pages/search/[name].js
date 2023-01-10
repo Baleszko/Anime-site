@@ -32,7 +32,7 @@ function Search() {
 
   return (
     <div className={style.container}>
-      <Header></Header>
+      {/* <Header onClick={handleClick}></Header> */}
       {isError ? <Error></Error> : <SearchByName anime={anime}></SearchByName>}
     </div>
   );
