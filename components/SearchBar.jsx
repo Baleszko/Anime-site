@@ -1,17 +1,30 @@
 import style from "../styles/SearchBar.module.css";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import { useState } from "react";
 
 function SearchBar() {
+  const router = useRouter();
   let [searchText, setSearchText] = useState("");
 
   const handleClick = (e) => {
     e.preventDefault();
-    console.log("The link was clicked.");
+    if (searchText) {
+      router.push(`/search/${searchText}`);
+      setSearchText("");
+    }
   };
 
   const handleChange = (e) => {
     setSearchText(e.target.value);
+    console.log(e.target.value);
+  };
+
+  const handleKeyDown = (e) => {
+    if (searchText && e.key === "Enter") {
+      router.push(`/search/${searchText}`);
+      setSearchText("");
+    }
   };
 
   return (
@@ -20,7 +33,9 @@ function SearchBar() {
         className={style.searchBar}
         type="search"
         placeholder="Search..."
+        value={searchText}
         onChange={handleChange}
+        onKeyDown={handleKeyDown}
       ></input>
       <button onClick={handleClick} className={style.button}>
         <div className={style.logo}>
@@ -32,5 +47,3 @@ function SearchBar() {
 }
 
 export default SearchBar;
-
-//window.location.href="localhost:3000/top"
