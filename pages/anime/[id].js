@@ -1,14 +1,15 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import Header from "../../components/Header";
 import Error from "../../components/Error";
 import style from "../../styles/animeId.module.css";
 import AnimeDetails from "../../components/AnimeDetails";
+import { TailSpin } from "react-loader-spinner";
 
 function Anime() {
   const router = useRouter();
   const { id } = router.query;
   const [anime, setAnime] = useState([]);
+  const [isLoading, setisLoading] = useState(false);
   const [isError, setIsError] = useState(false);
 
   useEffect(() => {
@@ -17,11 +18,13 @@ function Anime() {
     }
     const animeFetch = async () => {
       try {
+        setisLoading(true);
         const animeFetchId = await fetch(
           `https://api.jikan.moe/v4/anime/${id}/full`
         );
         const jsonAnimeFetchId = await animeFetchId.json();
         setAnime(jsonAnimeFetchId.data);
+        setisLoading(false);
       } catch (error) {
         setIsError(true);
       }
@@ -30,12 +33,27 @@ function Anime() {
     animeFetch();
   }, [id]);
 
-  return (
-    <div className={style.container}>
-      {/* <Header></Header> */}
-      {isError ? <Error></Error> : <AnimeDetails anime={anime}></AnimeDetails>}
-    </div>
-  );
+  const renderPage = () => {
+    if (isError) {
+      return <Error></Error>;
+    }
+    if (isLoading) {
+      return (
+        <TailSpin
+          height="100"
+          width="100"
+          color="#ff8e3c"
+          ariaLabel="tail-spin-loading"
+          radius="1"
+          wrapperClass="loader"
+          visible={true}
+        />
+      );
+    }
+    return <AnimeDetails anime={anime}></AnimeDetails>;
+  };
+
+  return <div className={style.container}>{renderPage()}</div>;
 }
 
 export default Anime;

@@ -21,7 +21,8 @@
 
 .imageContainer {
   position: relative;
-  min-width: 18rem;
+  /* min-width: 18rem; */
+  width: 50%;
   aspect-ratio: 0.8;
 }
 .image {
@@ -97,4 +98,50 @@
 
 .genresList :not(:last-child):after {
   content: ",";
+}
+
+@media screen and (max-width: 1500px) {
+  .imageContainer {
+    width: 40%;
+    aspect-ratio: 0.8;
+  }
+  .dataContainer {
+    justify-content: center;
+    margin-left: 2rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .dataContainer {
+    justify-content: left;
+    margin-left: 0;
+  }
+  .imageContainer {
+    width: 50%;
+    aspect-ratio: 0.8;
+  }
+  .title {
+    font-size: 1.25rem;
+  }
+  .container h3 {
+    display: inline;
+    font-size: 1.25rem;
+  }
+  .genresList {
+    font-size: 1rem;
+  }
+  .container h4 {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  }
+  .imageContainer {
+    width: 70%;
+    margin-bottom: 1rem;
+  }
 }

@@ -27,6 +27,11 @@ a {
   align-items: center;
 }
 
+.loader {
+  justify-self: center;
+  align-self: center;
+  margin-top: 30vh;
+}
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
