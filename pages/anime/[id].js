@@ -22,9 +22,17 @@ function Anime() {
         const animeFetchId = await fetch(
           `https://api.jikan.moe/v4/anime/${id}/full`
         );
-        const jsonAnimeFetchId = await animeFetchId.json();
-        setAnime(jsonAnimeFetchId.data);
-        setisLoading(false);
+        if (animeFetchId.ok) {
+          const jsonAnimeFetchId = await animeFetchId.json();
+          setAnime(jsonAnimeFetchId.data);
+          setisLoading(false);
+        }
+        if (animeFetchId.status >= 400 && animeFetchId.status <= 499) {
+          setIsError(true);
+        }
+        if (animeFetchId.status >= 500 && animeFetchId.status <= 599) {
+          setIsError(true);
+        }
       } catch (error) {
         setIsError(true);
       }

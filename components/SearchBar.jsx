@@ -17,7 +17,6 @@ function SearchBar() {
 
   const handleChange = (e) => {
     setSearchText(e.target.value);
-    console.log(e.target.value);
   };
 
   const handleKeyDown = (e) => {
