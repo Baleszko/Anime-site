@@ -6,6 +6,27 @@ body {
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+body {
+  --main-color: #eff0f3;
+  --main-text-color: #0d0d0d;
+  --secondary-text-color: #2a2a2a;
+  --main-design-color: #ff8e3c;
+  --main-design-color-light: #ff8d3c3e;
+  --secondary-design-color: #d9376e;
+  --secondary-design-color-light: #d9376d2d;
+  --white: #ecd9e089;
+  color: var(--main-text-color);
+  background: var(--main-color);
+  background-color: #eff0f3;
+  background-image: repeating-radial-gradient(
+      circle at 0 0,
+      transparent 0,
+      #eff0f3 12px
+    ),
+    repeating-linear-gradient(#ffd1b155, #ffd1b1);
+  min-height: 100vh;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -19,42 +40,11 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.top_container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 100%;
 }
 
 .loader {
   justify-self: center;
   align-self: center;
   margin-top: 30vh;
-}
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    --main-color: #eff0f3;
-    --main-text-color: #0d0d0d;
-    --secondary-text-color: #2a2a2a;
-    --main-design-color: #ff8e3c;
-    --main-design-color-light: #ff8d3c3e;
-    --secondary-design-color: #d9376e;
-    --secondary-design-color-light: #d9376d2d;
-    --white: #ecd9e089;
-    color: var(--main-text-color);
-    background: var(--main-color);
-    background-color: #eff0f3;
-
-    background-image: repeating-radial-gradient(
-        circle at 0 0,
-        transparent 0,
-        #eff0f3 12px
-      ),
-      repeating-linear-gradient(#ffd1b155, #ffd1b1);
-    min-height: 100vh;
-  }
 }

@@ -52,7 +52,7 @@ function Top() {
     return <TopAnimes top={topAnimes}></TopAnimes>;
   };
 
-  return <div className="top_container">{renderPage()}</div>;
+  return <>{renderPage()}</>;
 }
 
 export default Top;

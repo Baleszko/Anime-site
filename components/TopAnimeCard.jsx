@@ -8,7 +8,7 @@ function TopAnimeCard({ topItem, id }) {
       <div className={styles.imageContainer}>
         <Image
           className={styles.image}
-          src={topItem.images?.webp.image_url}
+          src={topItem.images?.webp.large_image_url}
           alt={topItem.title}
           layout="fill"
         ></Image>
@@ -38,6 +38,7 @@ function TopAnimeCard({ topItem, id }) {
         </div>
         <h4>{topItem.rating}</h4>
         <h4>{topItem.episodes ? `${topItem.episodes} episode` : null}</h4>
+        <h4> {topItem.duration}</h4>
         <ul className={styles.genresList}>
           {topItem.genres.map((item) => (
             <li key={item.mal_id}> {item.name}</li>
