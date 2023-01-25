@@ -4,7 +4,7 @@
   gap: 2rem;
   width: 98%;
   background-color: var(--main-color);
-  padding: 1rem;
+  padding: 2rem;
   margin-top: 2rem;
   border-radius: 2rem;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -37,12 +37,16 @@
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
   letter-spacing: 0.03rem;
+  margin-top: 0rem;
 }
 .data {
   display: inline;
   font-weight: 600;
   padding-left: 0.5rem;
-  letter-spacing: 0.02rem;
+}
+
+.duration {
+  font-weight: 600;
 }
 
 .relationContainer {
@@ -79,7 +83,6 @@
 @media screen and (max-width: 1500px) {
   .dataContainer h1 {
     font-size: 1.953rem;
-    margin-top: 0rem;
   }
   .datas {
     font-size: 1rem;

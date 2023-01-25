@@ -27,7 +27,6 @@ function Search() {
         if (animeFetchName.ok) {
           const jsonAnimeFetchName = await animeFetchName.json();
           setAnime(jsonAnimeFetchName.data);
-          console.log(Object.keys(jsonAnimeFetchName.data).length);
           if (Object.keys(jsonAnimeFetchName.data).length === 0) {
             setIsEmpty(true);
           } else {

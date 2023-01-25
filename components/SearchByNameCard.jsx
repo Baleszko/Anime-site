@@ -8,7 +8,7 @@ function SearchByAnimeCard({ anime }) {
       <div className={style.imageContainer}>
         <Image
           className={style.image}
-          src={anime.images?.webp.image_url}
+          src={anime.images?.webp.large_image_url}
           alt={anime.title}
           layout="fill"
         ></Image>
@@ -16,16 +16,18 @@ function SearchByAnimeCard({ anime }) {
       <div className={style.dataContainer}>
         <Link href={`../anime/${anime.mal_id}`}>
           <div className={style.titleContainer}>
-            <h3>{anime.title} </h3>
+            <h2>{anime.title} </h2>
           </div>
         </Link>
         <h4>{anime.rating}</h4>
+        <h4>{anime.duration}</h4>
         <h4>{anime.episodes ? `${anime.episodes} episode` : null}</h4>
-        <ul className={style.genresList}>
+        <ul className={`${style.genresList} ${style.listToCommas}`}>
           {anime.genres.map((item) => (
             <li key={item.mal_id}> {item.name}</li>
           ))}
         </ul>
+        <p className={style.synopsis}>{anime.synopsis}</p>
       </div>
     </div>
   );

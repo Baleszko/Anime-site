@@ -65,7 +65,7 @@ function AnimeDetails({ anime }) {
             </li>
           ))}
         </ul>
-        <p className={style.data}>{anime.duration}</p>
+        <p className={style.duration}>{anime.duration}</p>
       </div>
       <div className={style.relationContainer}>
         <h2>Relational content</h2>
