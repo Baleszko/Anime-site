@@ -38,7 +38,11 @@ function SearchBar() {
       ></input>
       <button onClick={handleClick} className={style.button}>
         <div className={style.logo}>
-          <Image src="/search.svg" alt="search logo" layout="fill"></Image>
+          <Image
+            src="/public/search.svg"
+            alt="search logo"
+            layout="fill"
+          ></Image>
         </div>
       </button>
     </div>
