@@ -13,7 +13,12 @@ function RelationDetails({ relation, entry }) {
           <p className={style.firstData}>{item.name}</p>
           <p className={style.secondData}>{item.type}</p>
           <p className={style.thirdData}>
-            <a className={style.link} href={item.url}>
+            <a
+              className={style.link}
+              rel="noopener noreferrer"
+              target="_blank"
+              href={item.url}
+            >
               {item.url}
             </a>
           </p>
