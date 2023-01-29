@@ -1,5 +1,46 @@
+.title {
+  font-weight: 700;
+  font-size: 3.815rem;
+  margin-left: -3rem;
+}
+
 .cardWrapper {
-  margin: 0rem 2rem 0rem 2rem;
+  width: 80%;
   display: flex;
   flex-direction: column;
+}
+
+@media screen and (max-width: 1400px) {
+  .cardWrapper {
+    width: 90%;
+  }
+  .title {
+    margin-left: 0rem;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .cardWrapper {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .cardWrapper {
+    margin: 0 2rem;
+  }
+
+  .title {
+    font-size: 3.052rem;
+    margin: 2rem;
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  .cardWrapper {
+    margin: 0 1rem;
+  }
+  .title {
+    font-size: 1.953rem;
+    margin: 1rem;
+    margin-left: 0;
+  }
 }

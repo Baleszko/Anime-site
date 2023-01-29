@@ -1,0 +1,110 @@
+.container {
+  display: flex;
+  background-color: var(--main-color);
+  padding: 2rem;
+  margin: 1rem;
+  gap: 1rem;
+  border-radius: 2rem;
+  width: 80%;
+  animation: fadeIn 300ms ease forwards;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.imageContainer {
+  position: relative;
+  width: 60%;
+  aspect-ratio: 0.8;
+}
+.image {
+  border-radius: 1rem;
+  aspect-ratio: 0.8;
+}
+
+@keyframes fadeIn {
+  0% {
+    transform: translateX(-5rem);
+    opacity: 0%;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 100%;
+  }
+}
+
+.titleContainer h2 {
+  font-size: 2.441rem;
+  margin-top: 0;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.dataContainer {
+  width: 100%;
+  margin-left: 1rem;
+}
+.dataContainer h4 {
+  margin: 0;
+  margin-bottom: 0.4rem;
+}
+
+.dataContainer ul {
+  display: inline-block;
+  margin: 0;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+.dataContainer li {
+  display: inline;
+}
+
+.genresList {
+  padding: 0;
+}
+
+.listToCommas :not(:last-child):after {
+  content: ",";
+}
+
+.synopsis {
+  line-height: 1.4rem;
+  width: 80%;
+}
+
+@media screen and (max-width: 1500px) {
+  .container {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 95%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .synopsis {
+    width: 95%;
+  }
+  .imageContainer {
+    width: 100%;
+  }
+  .dataContainer h2 {
+    font-size: 1.953rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+  .imageContainer {
+    width: 60%;
+    align-self: center;
+  }
+  .dataContainer h2 {
+    font-size: 1.563rem;
+  }
+
+  .synopsis {
+    font-size: 0.8rem;
+  }
+}

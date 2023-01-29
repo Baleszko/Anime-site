@@ -1,0 +1,149 @@
+.container {
+  display: flex;
+  background-color: var(--main-color);
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 2rem;
+  animation: fadeIn 300ms ease forwards;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+@keyframes fadeIn {
+  0% {
+    transform: translateX(-5rem);
+    opacity: 0%;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 100%;
+  }
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 0.8;
+}
+.image {
+  border-radius: 1rem;
+}
+
+.dataContainer {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1rem;
+  align-items: left;
+  width: 100%;
+}
+
+.titleContainer {
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 1.953rem;
+  font-weight: 500;
+  margin: 0;
+  display: inline;
+}
+
+.container h3 {
+  display: inline;
+  font-size: 1.953rem;
+  font-weight: 600;
+  margin: 0;
+  padding-left: 1rem;
+  padding-top: 1rem;
+  text-decoration: underline;
+}
+
+.container h4 {
+  margin: 0;
+  padding: 0.3rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.scoreContainer {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.svg {
+  width: 2.5rem;
+  stroke: black;
+  stroke-width: 0.06rem;
+  color: #ffd53bd2;
+  fill: #ffd53bc7;
+}
+
+.score {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--main-text-color);
+  display: inline;
+}
+
+.genresList {
+  display: inline;
+  margin: 0;
+  padding: 0.3rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+.genresList li {
+  display: inline;
+  padding-right: 0.5rem;
+}
+
+.genresList :not(:last-child):after {
+  content: ",";
+}
+
+@media screen and (max-width: 1500px) {
+  .imageContainer {
+    width: 40%;
+    aspect-ratio: 0.8;
+  }
+  .dataContainer {
+    width: 90%;
+    margin-left: 2rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .dataContainer {
+    justify-content: left;
+    margin-left: 0;
+  }
+  .imageContainer {
+    width: 50%;
+    aspect-ratio: 0.8;
+  }
+  .title {
+    font-size: 1.25rem;
+  }
+  .container h3 {
+    display: inline;
+    font-size: 1.25rem;
+  }
+  .genresList {
+    font-size: 1rem;
+  }
+  .container h4 {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  }
+  .imageContainer {
+    width: 80%;
+    margin-bottom: 1rem;
+  }
+}

@@ -1,15 +1,101 @@
 .card {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2);
-  background-color: var(--white);
-  margin: 0rem 1rem 1rem 2rem;
-  /* height: 500px; */
-  border-radius: 1rem;
-  gap: 1rem;
-  padding: 0.5rem;
+  background-color: var(--main-color);
+  margin-bottom: 3rem;
+  border-radius: 2rem;
+  padding: 2rem;
+  animation: fadeIn 300ms ease forwards;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
-.image {
-  border-radius: 1rem;
+@keyframes fadeIn {
+  0% {
+    transform: translateX(-5rem);
+    opacity: 0%;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 100%;
+  }
+}
+.subtitleContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+}
+
+.subtitle {
+  font-size: 1.953rem;
+}
+
+.secondTitle {
+  justify-self: end;
+}
+
+.contentContainer {
+  grid-column: 1 / span 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  padding: 1rem;
+  letter-spacing: 0.06rem;
+}
+
+.userName {
+  font-style: italic;
+  margin: 0;
+  align-self: end;
+  color: var(--secondary-text-color);
+}
+
+@media (hover: hover) {
+  .imageCard:hover {
+    background-color: var(--secondary-design-color-light);
+    padding: 1rem;
+    cursor: pointer;
+    transform: scale(1.01);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .card {
+    display: flex;
+    flex-direction: column;
+  }
+  .firtsCard {
+    order: 1;
+  }
+  .secondTitle {
+    order: 2;
+    justify-self: unset;
+  }
+  .secondCard {
+    order: 3;
+  }
+  .contentContainer {
+    order: 4;
+  }
+}
+@media screen and (max-width: 600px) {
+  .subtitle {
+    font-size: 1.25rem;
+  }
+  .contentContainer h2 {
+    margin-top: 3rem;
+    margin-bottom: 0rem;
+    font-size: 1.25rem;
+  }
+  .content {
+    padding: 1rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.08rem;
+  }
+  .userName {
+    font-size: 0.64rem;
+  }
 }
