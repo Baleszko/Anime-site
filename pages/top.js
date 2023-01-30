@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import TopAnimes from "../components/TopAnimes";
 import Error from "../components/Error";
 import { TailSpin } from "react-loader-spinner";
+import Head from "next/head";
 
 function Top() {
   const [topAnimes, setTopAnimes] = useState([]);
@@ -52,7 +53,14 @@ function Top() {
     return <TopAnimes top={topAnimes}></TopAnimes>;
   };
 
-  return <>{renderPage()}</>;
+  return (
+    <>
+      <Head>
+        <title>Top Animes</title>
+      </Head>
+      {renderPage()}
+    </>
+  );
 }
 
 export default Top;
