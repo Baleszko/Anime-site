@@ -80,13 +80,13 @@ function AnimeDetails({ anime }) {
 
       <h2>Trailer </h2>
       <div className={style.youtubeVideoContainer}>
-        <embed
+        <iframe
           className={style.youtubeVideo}
           type="video/webm"
-          src={anime.trailer?.embed_url}
+          src={`${anime.trailer?.embed_url}autoplay=0`}
           height="720"
           width="1280"
-        ></embed>
+        ></iframe>
       </div>
     </main>
   );

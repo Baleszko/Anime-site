@@ -2,6 +2,7 @@ import style from "../styles/SearchBar.module.css";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { useState } from "react";
+import searchSvg from "../public/search.svg";
 
 function SearchBar() {
   const router = useRouter();
@@ -38,11 +39,7 @@ function SearchBar() {
       ></input>
       <button onClick={handleClick} className={style.button}>
         <div className={style.logo}>
-          <Image
-            src="/public/search.svg"
-            alt="search logo"
-            layout="fill"
-          ></Image>
+          <Image src={searchSvg} alt="search logo" layout="fill"></Image>
         </div>
       </button>
     </div>
