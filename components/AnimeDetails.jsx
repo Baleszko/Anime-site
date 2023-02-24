@@ -1,8 +1,20 @@
 import style from "../styles/animeDetails.module.css";
 import Image from "next/image";
 import RelationDetails from "../components/RelationDetails.jsx";
+import Trailer from "../components/Trailer";
+import { useState, useEffect } from "react";
 
 function AnimeDetails({ anime }) {
+  const [isTrailer, setIsTrailer] = useState(false);
+
+  useEffect(() => {
+    if (anime.trailer?.embed_url === null) {
+      setIsTrailer(false);
+    } else {
+      setIsTrailer(true);
+    }
+  }, [anime.trailer?.embed_url]);
+
   return (
     <main className={style.main}>
       <div className={style.imgContainer}>
@@ -77,17 +89,9 @@ function AnimeDetails({ anime }) {
           ></RelationDetails>
         ))}
       </div>
-
-      <h2>Trailer </h2>
-      <div className={style.youtubeVideoContainer}>
-        <iframe
-          className={style.youtubeVideo}
-          type="video/webm"
-          src={`${anime.trailer?.embed_url}autoplay=0`}
-          height="720"
-          width="1280"
-        ></iframe>
-      </div>
+      {isTrailer ? (
+        <Trailer trailer={anime.trailer?.embed_url}></Trailer>
+      ) : null}
     </main>
   );
 }

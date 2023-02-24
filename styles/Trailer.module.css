@@ -1,0 +1,35 @@
+.youtubeVideoContainer {
+  grid-column: 1/3;
+  display: flex;
+  justify-self: center;
+  justify-content: center;
+  width: 70%;
+}
+
+.youtubeVideo {
+  justify-self: center;
+  height: 100%;
+  aspect-ratio: 16/9;
+}
+
+@media screen and (max-width: 1500px) {
+  .youtubeVideoContainer {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .youtubeVideoContainer {
+    align-self: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .youtubeVideoContainer {
+    width: 90%;
+    margin-bottom: 2rem;
+  }
+  .h2 {
+    margin-bottom: 0;
+  }
+}
