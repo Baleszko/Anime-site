@@ -35,7 +35,7 @@
 @media screen and (max-width: 600px) {
   .searchBarContainer {
     height: 1.5rem;
-    width: 60%;
+    width: 50%;
     margin-right: 1rem;
     -webkit-tap-highlight-color: transparent;
   }
